@@ -1,0 +1,181 @@
+// bower:scss
+@import 'bower_components/bootstrap/scss/bootstrap.scss';
+// endbower
+@import 'partial/_bg.img.scss';
+@import 'partial/_noise.img.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext');
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+
+  color: #272727;
+
+  font-size: 18px;
+  line-height: 30px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  position: relative;
+
+  padding: 50px;
+}
+
+::-moz-selection { background: #5aeab5; }
+::selection { background: #5aeab5; }
+
+a {
+  color: #272727;
+  &:hover {
+    color: #5aeab5;
+  }
+}
+
+.main {
+  
+  margin: 0 50px;
+
+  header {
+    .logo {
+      display: inline-block;
+    }
+    .email {
+      display: inline-block;
+      height: 66px;
+      line-height: 66px;
+    }
+  }
+
+  h1 {
+    margin: 140px 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    line-height: 42px;
+    font-weight: normal;
+  }
+
+  .text {
+    max-width: 455px;
+    a {
+      color: #999999;
+      text-decoration: none;
+    }
+  }
+
+}
+
+footer {
+
+  position: fixed;
+  padding: 0;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+
+  .our-clients {
+    margin-bottom: 2px;
+    a {
+      display: inline-block;
+      margin-right: 35px;
+      margin-bottom: 15px;
+      
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    img {
+      opacity: 0.9;
+      height: 45px;
+    }
+  }
+
+  div {
+    padding: 30px 50px;
+    background-color: #5aeab5;
+  }
+
+  p, a  {
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  hr {
+    border: 0;
+    height: 2px;
+    background-color: white;
+    margin-right: -50px;
+    margin-left: -50px;
+  }
+
+  a:hover {
+    color: white;
+  }
+}
+
+.logo:hover svg path{
+  fill: #5aeab5;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    margin: 0;
+  }
+  footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+body.on-hover {
+
+  .logo svg path{
+    fill: white;
+  }
+  
+  .text, header { 
+
+    color: white;
+    
+    a {
+      color: white;
+      &:hover {
+          color: #272727;
+      }
+    }
+
+
+  }
+  
+  footer div {
+    background-color: white;
+  }
+
+  #bg-container {
+    opacity: 0.7;
+  }
+
+  #bg-container {
+    display: block;
+  }
+  
+  #bg-img {
+    display: block;
+  }
+}
+}
