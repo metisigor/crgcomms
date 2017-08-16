@@ -124,7 +124,7 @@ footer {
   }
 }
 
-.logo:hover svg path{
+.logo:hover svg path {
   fill: #5aeab5;
 }
 
@@ -178,4 +178,28 @@ body.on-hover {
     display: block;
   }
 }
+}
+
+@media screen and (max-height: 800px) {
+
+
+  .main {
+    
+    h1 {
+      margin: 70px 0;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+  }
+
+  .our-clients {
+    margin-bottom: 2px;
+    a {
+      margin-right: 25px!important;
+    }
+    img {
+      height: 30px!important;
+    }
+  }
 }
