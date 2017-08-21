@@ -17,19 +17,13 @@
 		z-index:-2;
 		opacity: 0;
 		overflow: hidden;
-		// transition: opacity 0.3s ease;
-		// -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-		// filter: grayscale(100%);
 	}
 	.bgwidth { width: 100%; }
 	.bgheight { height: 100%; }
-
 }
 
-
-
-@media screen and (max-width: 640px) { /* Specific to this particular image */
-img#bg-container {
-	display: none;
-}
+@media screen and (max-width: 640px) {
+	img#bg-container {
+		display: none;
+	}
 }

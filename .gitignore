@@ -1,4 +1,5 @@
 node_modules
 .tmp
 bower_components
+materials
 test/bower_components

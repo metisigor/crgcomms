@@ -22,16 +22,25 @@ body {
 
   position: relative;
 
-  padding: 50px;
+  padding: 50px 50px 0 50px;
+}
+
+a {
+  color: #272727;
+  &:hover {
+    color: #5aeab5
+  }
 }
 
 ::-moz-selection { background: #5aeab5; }
 ::selection { background: #5aeab5; }
 
-a {
-  color: #272727;
+
+span.bcg-link {
+  color: #999999;
   &:hover {
-    color: #5aeab5;
+    color: #272727;
+    cursor: pointer;
   }
 }
 
@@ -51,18 +60,16 @@ a {
   }
 
   h1 {
-    margin: 140px 0;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 125px;
+    margin-bottom: 120px;
     line-height: 42px;
     font-weight: normal;
   }
 
   .text {
     max-width: 455px;
-    a {
-      color: #999999;
-      text-decoration: none;
+    p {
+      margin-bottom: 60px;
     }
   }
 
@@ -70,14 +77,9 @@ a {
 
 footer {
 
-  position: fixed;
-  padding: 0;
-  bottom: 50px;
-  left: 50px;
-  right: 50px;
-
   .our-clients {
     margin-bottom: 2px;
+
     a {
       display: inline-block;
       margin-right: 35px;
@@ -109,97 +111,58 @@ footer {
     text-decoration: underline;
     font-weight: bold;
     letter-spacing: 1px;
+    &:hover {
+      color: white;
+    }
   }
 
-  hr {
-    border: 0;
-    height: 2px;
-    background-color: white;
-    margin-right: -50px;
-    margin-left: -50px;
-  }
-
-  a:hover {
-    color: white;
-  }
 }
 
 .logo:hover svg path {
   fill: #5aeab5;
 }
 
+
 @media screen and (max-width: 640px) {
   .main {
     margin: 0;
   }
-  footer {
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 50px;
-  }
 }
 
 @media screen and (min-width: 640px) {
-body.on-hover {
 
-  .logo svg path{
-    fill: white;
-  }
-  
-  .text, header { 
+  body.on-hover {
 
-    color: white;
+    .logo svg path{
+      fill: white;
+    }
     
-    a {
+    .text, header { 
       color: white;
-      &:hover {
-          color: #272727;
+      a, span {
+        color: white;
+        &:hover {
+            color: #272727;
+        }
       }
+
     }
-
-
-  }
-  
-  footer div {
-    background-color: white;
-  }
-
-  #bg-container {
-    opacity: 0.7;
-  }
-
-  #bg-container {
-    display: block;
-  }
-  
-  #bg-img {
-    display: block;
-  }
-}
-}
-
-@media screen and (max-height: 800px) {
-
-
-  .main {
     
-    h1 {
-      margin: 70px 0;
-      margin-top: 5vh;
-      margin-bottom: 5vh;
+    footer div {
+      background-color: white;
     }
 
+    #bg-container {
+      opacity: 0.7;
+    }
+
+    #bg-container {
+      display: block;
+    }
+    
+    #bg-img {
+      display: block;
+    }
   }
 
-  .our-clients {
-    margin-bottom: 2px;
-    a {
-      margin-right: 25px!important;
-    }
-    img {
-      height: 30px!important;
-    }
-  }
 }

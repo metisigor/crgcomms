@@ -1,15 +1,14 @@
 
-function setBackground(image_url) {
-
-	var winW = $(window).width(),
-        winH = $(window).height(),
-        $bgImg = $('#bg-img');
-	
-	$bgImg.css('background-image', image_url);
+function setBackground(number) {
+	document.getElementById('bcg' + number).addEventListener('mouseover', function (e) {
+		document.getElementById('bg-img').style.backgroundImage = 'url(images/bg/bcg' + number + '_1200.jpg)';
+	});
 }
 
-$( document ).ready(function() {
 
+document.addEventListener('DOMContentLoaded', function(event) { 
+
+	// images preloading
 
 	var bcg1 = new Image();
 	bcg1.src = 'images/bg/bcg1_1200.jpg';
@@ -21,29 +20,28 @@ $( document ).ready(function() {
 	bcg3.src = 'images/bg/bcg3_1200.jpg';
 
 
-    $( '#bcg1' ).hover(
-    	function() {
-			setBackground('url(images/bg/bcg1_1200.jpg)');
-		}
-	);
-    $( '#bcg2' ).hover(
-    	function() {
-			setBackground('url(images/bg/bcg2_1200.jpg)');
-		}
-	);
-    $( '#bcg3' ).hover(
-    	function() {
-			setBackground('url(images/bg/bcg3_1200.jpg)');
-		}
-	);
+	// add specific id listeners
 
-    $( '.bcg-link' ).hover(
-    	function() {
-			$('body').addClass( 'on-hover' );
-		}, function() {
-			$('body').removeClass( 'on-hover' );
-		}
-	);
+	setBackground(1);
+	setBackground(2);
+	setBackground(3);
 
+	// class hover listeners
+
+	var els = document.getElementsByClassName('bcg-link');
+
+	for(var i=0;i<els.length; i++) {
+
+	    if (!els.hasOwnProperty(i)) continue;
+
+	    
+	    els[i].addEventListener( 'mouseover', function() {
+	        document.body.className += 'on-hover';
+	    });
+
+	    els[i].addEventListener( 'mouseout', function() {
+	        document.body.className = document.body.className.replace( /(?:^|\s)on-hover(?!\S)/g , '' );
+	    });
+	}
 
 });
