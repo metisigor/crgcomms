@@ -89,13 +89,17 @@ footer {
         opacity: 0.5;
       }
     }
+
     p {
       margin-bottom: 20px;
     }
+
     img {
       opacity: 0.9;
       height: 45px;
+      max-width: 125%;
     }
+
   }
 
   div {
