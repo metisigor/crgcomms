@@ -126,6 +126,11 @@ footer {
   fill: #5aeab5;
 }
 
+@media screen and (max-width: 320px) {
+  body {
+    padding: 15px;
+  }
+}
 
 @media screen and (max-width: 640px) {
   .main {
